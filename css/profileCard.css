@@ -1,0 +1,165 @@
+/* whole result */
+.sr-card{
+  width: 520px;               
+  margin: 20px;
+  position: relative;
+  color: #000;
+}
+
+.sr-meta{
+  display: inline-block;
+  margin-left: 34px;
+  padding: 5px 12px;
+  background: var(--pink-card);
+  border: 1px solid var(--pink-edge);
+  border-bottom: none;
+  border-radius: 999px 999px 0 0;
+  box-shadow: 0 2px 0 rgba(255,255,255,.5) inset;
+}
+
+.sr-body{
+  position: relative;
+  padding: 18px 16px 14px;
+  background: linear-gradient(#ffb5b5, #ff9fa0);
+  border: 2px solid var(--pink-edge);
+  border-radius: 18px;
+  box-shadow:
+    0 3px 0 var(--pink-shadow),
+    0 1px 0 rgba(255,255,255,.75) inset;
+  overflow: hidden;
+}
+
+.sr-body::before{
+  content:"";
+  position:absolute;
+  left: 12px; right: 12px;
+  top: 10px; bottom: 10px;
+  background: linear-gradient(#ffd0cf, #ffc2c1);
+  border: 1px solid rgba(217,122,122,.8);
+  border-radius: 14px;
+  box-shadow: 0 2px 0 rgba(255,255,255,.65) inset;
+  z-index: 0;
+}
+
+.sr-body::after{
+  content:"";
+  position:absolute;
+  left: 18px;
+  top: -10px;
+  width: 120px;
+  height: 26px;
+  background: var(--pink-card-2);
+  border: 1px solid var(--pink-edge);
+  border-bottom: none;
+  border-radius: 14px 14px 0 0;
+  z-index: 0;
+  opacity: .9;
+}
+
+.sr-body > *{
+  position: relative;
+  z-index: 1;
+}
+
+.sr-user{
+  display: inline-block;
+  margin: 0 0 8px 8px;
+  color: var(--blue-link);
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.sr-main{
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 14px;
+  padding: 10px;
+  background: rgba(255,255,255,.25);
+  border: 1px solid rgba(217,122,122,.9);
+  border-radius: 12px;
+  box-shadow: 0 2px 0 rgba(255,255,255,.5) inset;
+}
+
+.sr-avatar{
+  width: 110px;
+  height: 90px;
+  object-fit: cover;
+  display: block;
+  border: 1px solid rgba(0,0,0,.2);
+  background: rgba(255,255,255,.65);
+}
+
+.sr-title{
+  margin: 0 0 6px 0;
+  font-size: 16px;
+  color: #600;
+  font-weight: 700;
+}
+
+.sr-fields{
+  margin: 0;
+  display: grid;
+  gap: 2px;
+}
+.sr-fields > div{
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  column-gap: 6px;
+}
+.sr-fields dt{
+  font-weight: 700;
+}
+.sr-fields dd{
+  margin: 0;
+}
+
+.sr-actions{
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.sr-btn{
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(0,0,0,.35);
+  background: linear-gradient(#eaf4ff, #8bc3ff);
+  color: #003399;
+  text-decoration: none;
+  font-weight: 700;
+  box-shadow: 0 1px 0 rgba(255,255,255,.8) inset;
+}
+.sr-btn:hover{
+  filter: brightness(1.05);
+}
+
+/* Phase 1: mobile reflow for search-result cards. Desktop 520px stays. */
+@media (max-width: 600px) {
+  .sr-card {
+    width: auto;
+    max-width: 520px;
+    margin: 16px 8px;
+  }
+  .sr-main {
+    grid-template-columns: 90px 1fr;
+    gap: 10px;
+    padding: 8px;
+  }
+  .sr-avatar {
+    width: 80px;
+    height: 70px;
+  }
+  .sr-fields > div {
+    grid-template-columns: 100px 1fr;
+  }
+  .sr-actions {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+  .sr-btn {
+    padding: 6px 14px;
+  }
+}
