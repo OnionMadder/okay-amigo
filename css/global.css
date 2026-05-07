@@ -34,6 +34,36 @@ text-size-adjust: 100%;
   -webkit-overflow-scrolling: touch;
 }
 
+/* Phase 1: prevent iOS Safari zoom-on-focus on form fields by ensuring
+   they use ≥16px font on mobile. Desktop museum styling (10–11px) is
+   unchanged. Inputs inside .legacy-frame are excluded so the legacy
+   quick-search form doesn't suddenly grow on phones — they're already
+   inside a horizontally-swipable frame, so iOS zoom isn't a footgun there. */
+@media (max-width: 768px) {
+  body input[type=text],
+  body input[type=password],
+  body input[type=email],
+  body input[type=search],
+  body input[type=tel],
+  body input[type=url],
+  body input[type=number],
+  body textarea,
+  body select {
+    font-size: 16px !important;
+  }
+  .legacy-frame input[type=text],
+  .legacy-frame input[type=password],
+  .legacy-frame input[type=email],
+  .legacy-frame input[type=search],
+  .legacy-frame input[type=tel],
+  .legacy-frame input[type=url],
+  .legacy-frame input[type=number],
+  .legacy-frame textarea,
+  .legacy-frame select {
+    font-size: inherit !important;
+  }
+}
+
 a { 
 text-decoration: underline; 
 }

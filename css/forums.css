@@ -1,0 +1,834 @@
+/* =========================================================
+   Okay, Amigo! — forums
+   Old-school phpBB-era look in the okayamigo pink/red palette.
+   ========================================================= */
+
+#forum_page {
+  width: 940px;
+  text-align: left;
+  margin: 0;
+  padding: 0;
+  background-color: #FFD8D4;
+}
+
+#forum_content {
+  vertical-align: top;
+  padding-left: 6px;
+  padding-right: 6px;
+  width: 710px;
+}
+
+#forum_body {
+  padding: 4px 0 24px 0;
+}
+
+#forum_content .topstrip {
+  height: 27px;
+  margin: 0;
+  padding: 0;
+  line-height: 0;
+}
+#forum_content .topstrip img { display: block; }
+
+/* Sidebar text nav */
+#member_nav {
+  margin-top: 4px;
+  padding-left: 12px;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  color: #600;
+}
+#member_nav .hello {
+  font-size: 12px;
+  margin: 0 0 6px 0;
+  color: #890900;
+}
+#member_nav ul {
+  list-style: none;
+  margin: 0; padding: 0;
+}
+#member_nav ul li {
+  border-top: 1px dotted #933;
+  padding: 4px 0 4px 4px;
+}
+#member_nav ul li:last-child {
+  border-bottom: 1px dotted #933;
+}
+#member_nav ul li a {
+  color: #600;
+  text-decoration: none;
+  font-weight: normal;
+}
+#member_nav ul li a:hover {
+  text-decoration: underline;
+  color: #890900;
+}
+#member_nav ul li a b { color: #890900; }
+#member_nav .invite {
+  margin-top: 12px;
+  padding: 6px 6px 6px 6px;
+  background: #F2ACAC;
+  border: 2px solid #853D3D;
+  font-size: 10px;
+  color: #650500;
+  text-align: center;
+  line-height: 1.35;
+}
+#member_nav .rank_card {
+  margin-top: 10px;
+  padding: 5px;
+  background: #FCC;
+  border: 2px solid #853D3D;
+  text-align: center;
+  font-size: 10px;
+  color: #600;
+}
+
+/* Subtitle row above each page */
+#forum_content .subtitle {
+  font-family: Verdana, sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  color: #890900;
+  padding: 12px 0 4px 0;
+}
+#forum_content .forum_title {
+  display: inline-block;
+  padding: 4px 10px;
+  background: #933;
+  color: #fc0;
+  border: 2px solid #600;
+}
+
+/* Breadcrumbs */
+.crumbs {
+  font-family: Verdana, Arial, sans-serif;
+  font-size: 11px;
+  color: #600;
+  margin: 6px 0 8px 0;
+  padding: 4px 6px;
+  background: #FCC;
+  border: 1px solid #C66;
+}
+.crumbs a { color: #890900; text-decoration: underline; }
+.crumbs a:hover { color: #600; }
+
+/* Quick stats banner */
+.forum_stats {
+  margin: 0 0 8px 0;
+  padding: 6px 8px;
+  background: #E68F8F;
+  border: 2px solid #853D3D;
+  color: #2b0000;
+  font-size: 11px;
+  font-family: Verdana, Arial, sans-serif;
+}
+.forum_stats b { color: #650500; }
+
+/* =========================================================
+   Forum index :: list of categories and forums
+   ========================================================= */
+table.forum_index {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 12px;
+  font-family: Verdana, Arial, sans-serif;
+  font-size: 11px;
+  border: 2px solid #853D3D;
+  background: #FCC;
+}
+table.forum_index th.cat {
+  background: #933;
+  color: #fc0;
+  text-align: left;
+  padding: 5px 8px;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 0.04em;
+  border-bottom: 2px solid #600;
+}
+table.forum_index th.cat .blurb {
+  font-size: 10px;
+  font-weight: normal;
+  color: #FFD8D4;
+  margin-left: 8px;
+}
+table.forum_index th.col {
+  background: #C66;
+  color: #650500;
+  text-align: center;
+  padding: 3px 6px;
+  font-size: 10px;
+  border-bottom: 1px solid #853D3D;
+  border-right: 1px solid #853D3D;
+}
+table.forum_index th.col.first {
+  text-align: left;
+  padding-left: 10px;
+}
+table.forum_index td {
+  border-bottom: 1px solid #C66;
+  border-right: 1px solid #C66;
+  padding: 6px 8px;
+  vertical-align: middle;
+  color: #2b0000;
+}
+table.forum_index td.icon {
+  width: 36px;
+  text-align: center;
+  font-size: 18px;
+  color: #650500;
+}
+table.forum_index td.fname {
+  width: auto;
+}
+table.forum_index td.fname a {
+  font-size: 13px;
+  font-weight: bold;
+  color: #890900;
+  text-decoration: none;
+}
+table.forum_index td.fname a:hover {
+  text-decoration: underline;
+  color: #600;
+}
+table.forum_index td.fname .desc {
+  display: block;
+  font-size: 10px;
+  color: #650500;
+  margin-top: 2px;
+  font-weight: normal;
+}
+table.forum_index td.num {
+  width: 60px;
+  text-align: center;
+  font-size: 11px;
+  color: #650500;
+}
+table.forum_index td.last {
+  width: 220px;
+  font-size: 10px;
+  color: #650500;
+}
+table.forum_index td.last a {
+  color: #890900;
+  font-weight: bold;
+  text-decoration: none;
+}
+table.forum_index td.last a:hover { text-decoration: underline; }
+table.forum_index td.last .empty {
+  font-style: italic;
+  color: #C66;
+}
+
+/* =========================================================
+   Forum view :: list of topics in a single forum
+   ========================================================= */
+table.thread_list {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 12px;
+  font-family: Verdana, Arial, sans-serif;
+  font-size: 11px;
+  border: 2px solid #853D3D;
+  background: #FCC;
+}
+table.thread_list th {
+  background: #933;
+  color: #fc0;
+  text-align: center;
+  padding: 4px 8px;
+  font-size: 11px;
+  font-weight: bold;
+  border-bottom: 2px solid #600;
+  border-right: 1px solid #600;
+}
+table.thread_list th.first { text-align: left; }
+table.thread_list td {
+  border-bottom: 1px solid #C66;
+  border-right: 1px solid #C66;
+  padding: 6px 8px;
+  vertical-align: middle;
+  color: #2b0000;
+}
+table.thread_list tr:nth-child(odd) td  { background: #FCC; }
+table.thread_list tr:nth-child(even) td { background: #F2ACAC; }
+table.thread_list td.flag {
+  width: 32px;
+  text-align: center;
+  font-size: 14px;
+  color: #650500;
+}
+table.thread_list td.flag .sticky  { color: #890900; }
+table.thread_list td.flag .locked  { color: #444; }
+table.thread_list td.title a {
+  font-size: 12px;
+  font-weight: bold;
+  color: #890900;
+  text-decoration: none;
+}
+table.thread_list td.title a:hover { text-decoration: underline; }
+table.thread_list td.title .author {
+  display: block;
+  font-size: 10px;
+  color: #650500;
+  font-weight: normal;
+  margin-top: 1px;
+}
+table.thread_list td.num {
+  width: 56px;
+  text-align: center;
+  color: #650500;
+}
+table.thread_list td.last {
+  width: 220px;
+  font-size: 10px;
+  color: #650500;
+}
+table.thread_list td.last a { color: #890900; font-weight: bold; text-decoration: none; }
+table.thread_list td.last a:hover { text-decoration: underline; }
+
+table.thread_list tr.empty td {
+  background: #FCC;
+  text-align: center;
+  font-style: italic;
+  color: #650500;
+  padding: 16px;
+}
+
+/* =========================================================
+   Thread view :: actual posts
+   ========================================================= */
+table.post {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 8px;
+  font-family: Verdana, Arial, sans-serif;
+  font-size: 11px;
+  border: 2px solid #853D3D;
+  background: #FCC;
+}
+table.post td.meta {
+  width: 170px;
+  background: #E68F8F;
+  vertical-align: top;
+  padding: 8px;
+  border-right: 2px solid #853D3D;
+  color: #2b0000;
+  text-align: center;
+}
+table.post td.meta .uname {
+  font-size: 13px;
+  font-weight: bold;
+  color: #890900;
+  display: block;
+  padding-bottom: 3px;
+}
+table.post td.meta .uname a {
+  color: #890900;
+  text-decoration: none;
+}
+table.post td.meta .uname a:hover { text-decoration: underline; }
+table.post td.meta .rank {
+  font-size: 10px;
+  color: #650500;
+  display: block;
+  padding-bottom: 6px;
+}
+table.post td.meta .rank img { display: inline-block; }
+table.post td.meta .stats {
+  font-size: 10px;
+  color: #2b0000;
+  text-align: left;
+  background: #F2ACAC;
+  border: 1px solid #853D3D;
+  padding: 4px 6px;
+  margin-top: 4px;
+}
+table.post td.meta .stats b { color: #650500; }
+
+table.post td.body {
+  vertical-align: top;
+  padding: 8px 10px;
+  color: #2b0000;
+  line-height: 1.45;
+  font-size: 12px;
+}
+table.post td.body .post_header {
+  border-bottom: 1px dashed #C66;
+  padding-bottom: 4px;
+  margin-bottom: 8px;
+  font-size: 10px;
+  color: #650500;
+  display: flex;
+  justify-content: space-between;
+}
+table.post td.body .post_header b { color: #890900; }
+table.post td.body .post_header .actions a {
+  color: #890900;
+  text-decoration: none;
+  font-weight: bold;
+  margin-left: 8px;
+}
+table.post td.body .post_header .actions a:hover { text-decoration: underline; }
+table.post td.body .post_signature {
+  margin-top: 16px;
+  padding-top: 6px;
+  border-top: 1px solid #C66;
+  color: #650500;
+  font-size: 10px;
+  font-style: italic;
+}
+table.post td.body .post_edited {
+  margin-top: 10px;
+  font-size: 10px;
+  color: #933;
+  font-style: italic;
+}
+
+/* Inline quote box */
+table.quote {
+  border-collapse: collapse;
+  margin: 6px 0 6px 0;
+  width: 96%;
+  background: #F2ACAC;
+  border: 1px solid #853D3D;
+}
+table.quote th {
+  background: #933;
+  color: #fc0;
+  text-align: left;
+  padding: 2px 6px;
+  font-size: 10px;
+  font-weight: bold;
+}
+table.quote td {
+  padding: 5px 8px;
+  font-size: 11px;
+  color: #2b0000;
+}
+
+/* =========================================================
+   Reply / new thread form
+   ========================================================= */
+table.post_form {
+  width: 100%;
+  border-collapse: collapse;
+  border: 2px solid #853D3D;
+  background: #FCC;
+  margin-bottom: 12px;
+  font-family: Verdana, Arial, sans-serif;
+}
+table.post_form th {
+  background: #933;
+  color: #fc0;
+  text-align: left;
+  padding: 4px 8px;
+  font-size: 12px;
+  font-weight: bold;
+}
+table.post_form td.lbl {
+  width: 110px;
+  background: #E68F8F;
+  color: #2b0000;
+  font-size: 11px;
+  font-weight: bold;
+  text-align: right;
+  padding: 6px 8px;
+  border-bottom: 1px solid #C66;
+  border-right: 1px solid #853D3D;
+}
+table.post_form td.fld {
+  background: #FCC;
+  padding: 6px 8px;
+  border-bottom: 1px solid #C66;
+}
+table.post_form input[type=text],
+table.post_form textarea {
+  font-family: Verdana, Arial, sans-serif;
+  font-size: 12px;
+  background: #fff;
+  color: #2b0000;
+  border: 2px solid #7a2a2a;
+  padding: 3px 5px;
+  box-sizing: border-box;
+}
+table.post_form input[type=text] { width: 100%; }
+table.post_form textarea {
+  width: 100%;
+  height: 220px;
+  line-height: 1.4;
+}
+table.post_form .bb_help {
+  font-size: 10px;
+  color: #650500;
+  margin-top: 4px;
+}
+table.post_form .bb_help code {
+  background: #F2ACAC;
+  padding: 1px 3px;
+  border: 1px solid #C66;
+  font-family: monospace;
+}
+table.post_form .submit_row {
+  background: #E68F8F;
+  text-align: right;
+  padding: 8px 10px;
+}
+table.post_form input[type=submit],
+table.post_form button {
+  background: #933;
+  color: #fc0;
+  border: 2px solid #600;
+  font-family: Verdana, Arial, sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 4px 14px;
+  cursor: pointer;
+}
+table.post_form input[type=submit]:hover,
+table.post_form button:hover {
+  background: #600;
+  color: #fff;
+}
+
+/* =========================================================
+   Toolbar (above thread/forum tables)
+   ========================================================= */
+.toolbar {
+  margin: 6px 0 6px 0;
+  padding: 5px 8px;
+  background: #C66;
+  border: 1px solid #853D3D;
+  font-size: 11px;
+  color: #650500;
+  font-family: Verdana, Arial, sans-serif;
+  display: block;
+  overflow: hidden;
+}
+.toolbar .left  { float: left;  }
+.toolbar .right { float: right; }
+.toolbar a.btn {
+  display: inline-block;
+  padding: 3px 10px;
+  background: #933;
+  color: #fc0;
+  border: 2px solid #600;
+  font-weight: bold;
+  font-size: 11px;
+  text-decoration: none;
+  margin-right: 4px;
+}
+.toolbar a.btn:hover { background: #600; color: #fff; }
+
+/* Pagination */
+.pager {
+  font-size: 11px;
+  color: #650500;
+  padding: 0;
+}
+.pager a, .pager span {
+  display: inline-block;
+  padding: 1px 6px;
+  margin-right: 1px;
+  border: 1px solid #853D3D;
+  background: #FCC;
+  color: #890900;
+  text-decoration: none;
+}
+.pager a:hover { background: #933; color: #fc0; }
+.pager span.cur {
+  background: #933;
+  color: #fc0;
+  font-weight: bold;
+}
+.pager span.gap { background: transparent; border: 0; }
+
+/* =========================================================
+   Login & members lobby
+   ========================================================= */
+table.signon {
+  width: 360px;
+  margin: 30px auto;
+  border-collapse: collapse;
+  border: 2px solid #5d1717;
+  background: #8e2f2f;
+  font-family: Verdana, Arial, sans-serif;
+}
+table.signon th {
+  background: #5d1717;
+  color: #fc0;
+  font-size: 14px;
+  text-align: left;
+  padding: 6px 10px;
+  letter-spacing: 0.06em;
+}
+table.signon td {
+  padding: 8px 10px;
+  color: #ffd18a;
+  font-size: 11px;
+}
+table.signon td.lbl {
+  width: 100px;
+  text-align: right;
+  color: #fc0;
+  font-weight: bold;
+}
+table.signon input[type=text],
+table.signon input[type=password] {
+  font: 12px Verdana, Arial, sans-serif;
+  border: 2px solid #7a2a2a;
+  background: #fff;
+  color: #2b0000;
+  padding: 3px 5px;
+  width: 200px;
+}
+table.signon .submit {
+  text-align: center;
+  background: #b35a5a;
+  padding: 8px 10px;
+}
+table.signon button,
+table.signon input[type=submit] {
+  background: #fc0;
+  color: #5d1717;
+  border: 2px solid #2b0000;
+  padding: 4px 16px;
+  font-weight: bold;
+  font-size: 12px;
+  cursor: pointer;
+}
+table.signon button:hover,
+table.signon input[type=submit]:hover {
+  background: #fff;
+  color: #5d1717;
+}
+table.signon .err {
+  color: #ffe;
+  background: #5d1717;
+  text-align: center;
+  font-weight: bold;
+  padding: 6px;
+}
+table.signon a {
+  color: #ffd18a;
+  text-decoration: underline;
+}
+
+/* Lobby cards */
+.lobby {
+  display: block;
+  font-family: Verdana, Arial, sans-serif;
+  margin-top: 6px;
+}
+.lobby .card {
+  background: #FCC;
+  border: 2px solid #853D3D;
+  padding: 10px 12px;
+  margin-bottom: 8px;
+  color: #2b0000;
+}
+.lobby .card h3 {
+  margin: 0 0 4px 0;
+  font-size: 14px;
+  color: #890900;
+}
+.lobby .card p {
+  margin: 0 0 6px 0;
+  font-size: 11px;
+  color: #650500;
+  line-height: 1.4;
+}
+.lobby .card a.btn {
+  display: inline-block;
+  background: #933;
+  color: #fc0;
+  border: 2px solid #600;
+  padding: 3px 12px;
+  font-weight: bold;
+  font-size: 11px;
+  text-decoration: none;
+}
+.lobby .card a.btn:hover { background: #600; color: #fff; }
+
+/* Online list */
+table.online {
+  width: 100%;
+  border-collapse: collapse;
+  border: 2px solid #853D3D;
+  background: #FCC;
+  font-family: Verdana, Arial, sans-serif;
+  font-size: 11px;
+}
+table.online th {
+  background: #933;
+  color: #fc0;
+  text-align: left;
+  padding: 4px 8px;
+}
+table.online td {
+  padding: 4px 8px;
+  border-bottom: 1px solid #C66;
+  color: #2b0000;
+}
+table.online td a { color: #890900; font-weight: bold; }
+
+/* Flash messages */
+.flash {
+  margin: 6px 0;
+  padding: 6px 10px;
+  border: 2px solid;
+  font-family: Verdana, Arial, sans-serif;
+  font-size: 11px;
+}
+.flash.ok    { background: #cfe9c8; border-color: #4a7d3a; color: #1d4111; }
+.flash.warn  { background: #fff3c0; border-color: #b58a00; color: #5a3f00; }
+.flash.error { background: #f9c0c0; border-color: #933;    color: #4a0000; }
+
+/* =========================================================
+   Phase 1: mobile reflow — overrides for narrow viewports.
+   Desktop styles above are intentionally untouched.
+   ========================================================= */
+
+/* Tablet + smaller: container shrinks instead of being a hard 940px */
+@media (max-width: 980px) {
+  #forum_page {
+    width: auto;
+    max-width: 100%;
+  }
+}
+
+/* Phone: stack the layout.php sidebar above content + bump tap targets */
+@media (max-width: 768px) {
+  #forum_page,
+  #forum_page > tbody,
+  #forum_page > tbody > tr,
+  #forum_page > tbody > tr > td {
+    display: block;
+    width: 100% !important;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+  #forum_content {
+    width: 100% !important;
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+  /* The 521px-wide decorative top strip overflows on phones; hide it */
+  #forum_content .topstrip { display: none; }
+
+  /* Tap targets — pager */
+  .pager a, .pager span {
+    padding: 6px 10px;
+    margin-right: 2px;
+    min-height: 22px;
+  }
+  /* Tap targets — toolbar buttons */
+  .toolbar a.btn {
+    padding: 8px 14px;
+    margin: 4px 4px 4px 0;
+    display: inline-block;
+  }
+  .toolbar { line-height: 1.8; }
+
+  /* Forum post action links (quote, jump, #post-id) get a bit of padding */
+  table.post td.body .post_header .actions a {
+    padding: 4px 6px;
+    display: inline-block;
+  }
+
+  /* Sign-on form: shrinkable, edges off the screen edge */
+  table.signon {
+    width: auto;
+    max-width: 360px;
+    margin: 20px 8px;
+  }
+  table.signon input[type=text],
+  table.signon input[type=password] {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* Lobby cards: full-width, less aggressive padding */
+  .lobby .card { padding: 10px 10px; }
+}
+
+/* Phone, narrower: post meta wraps above body; hide bulky "Last Post" column */
+@media (max-width: 600px) {
+  /* Posts: meta cell stacks above body cell */
+  table.post,
+  table.post > tbody,
+  table.post > tbody > tr {
+    display: block;
+    width: 100%;
+  }
+  table.post td.meta,
+  table.post td.body {
+    display: block;
+    width: 100% !important;
+    box-sizing: border-box;
+  }
+  table.post td.meta {
+    border-right: none;
+    border-bottom: 2px solid #853D3D;
+    text-align: left;
+    padding: 8px 10px;
+  }
+  table.post td.meta .uname,
+  table.post td.meta .rank {
+    display: inline-block;
+    padding-bottom: 0;
+  }
+  table.post td.meta .rank { margin-left: 8px; }
+  table.post td.meta .stats {
+    margin-top: 6px;
+    display: block;
+  }
+  table.post td.meta .rank img { vertical-align: middle; }
+
+  /* Post header (posted timestamp + actions): allow wrap */
+  table.post td.body .post_header {
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+
+  /* Forum index + thread list: hide bulky "Last Post" column.
+     Last column is 5th in both tables. */
+  table.forum_index tr > th:nth-child(5),
+  table.forum_index tr > td.last,
+  table.thread_list tr > th:nth-child(5),
+  table.thread_list tr > td.last {
+    display: none;
+  }
+
+  /* Forum index forum-name typography gets a small bump */
+  table.forum_index td.fname a { font-size: 14px; }
+
+  /* Toolbar left/right stack instead of float */
+  .toolbar .left, .toolbar .right {
+    float: none;
+    display: block;
+  }
+  .toolbar .right { margin-top: 6px; }
+
+  /* Quote box: tighter on small screens */
+  table.quote { width: 100%; }
+
+  /* Post-form labels stack above fields on phones */
+  table.post_form,
+  table.post_form > tbody,
+  table.post_form > tbody > tr {
+    display: block;
+    width: 100%;
+  }
+  table.post_form td.lbl,
+  table.post_form td.fld {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: left;
+    border-right: none;
+  }
+  table.post_form td.lbl { padding: 6px 8px 2px; }
+  table.post_form textarea { height: 160px; }
+}
