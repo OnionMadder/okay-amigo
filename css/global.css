@@ -1,0 +1,348 @@
+@import url("https://okayamigo.xyz/css/mail.css");
+@import url("https://okayamigo.xyz/css/join.css");
+@import url("https://okayamigo.xyz/css/mediaSubmissions.css");
+@import url("https://okayamigo.xyz/css/membersDisplay.css");
+@import url("https://okayamigo.xyz/css/profile.css");
+@import url("https://okayamigo.xyz/css/search.css");
+@import url("https://okayamigo.xyz/css/events.css");
+@import url("https://okayamigo.xyz/css/groups.css");
+@import url("https://okayamigo.xyz/css/albums.css");
+@import url("https://okayamigo.xyz/css/home.css");
+@import url("https://okayamigo.xyz/css/blackbook.css"); 
+@import url("https://okayamigo.xyz/css/legal.css");
+@import url("https://okayamigo.xyz/css/forums.css");
+
+body
+{
+font-family: Verdana, Sans-Serif, Helvetica, Arial;
+font-size: 10px;
+color: #600;
+
+padding:0;
+margin:0;
+background-color: #FFD8D4;
+  /* background-color: #fff; */
+
+-webkit-text-size-adjust: 100%;
+text-size-adjust: 100%;
+}
+
+/* Legacy splash + tour mosaic shim: lets phones swipe horizontally
+   inside the frame without horizontal-scrolling the whole page. */
+.legacy-frame {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+a { 
+text-decoration: underline; 
+}
+a:hover 
+{ 
+text-decoration: none; 
+text-decoration: overline; 
+}
+
+.title2 {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+
+.error_msg {
+color: #f00;
+font-weight:bold;
+}
+
+textarea, select, input {
+font-family: Verdana, Sans-Serif, Helvetica, Arial;
+font-size: 10px;
+}
+
+#public_page 
+{
+  
+  text-align: left;
+  width: 751px;
+
+  padding:0;
+  margin: 0;
+/* border: 5px #f00 solid; */ 
+
+background-color: #FFD8D4;
+}
+
+#public_page .quick_search 
+{
+padding: 0;
+margin:0;
+}													
+
+#public_page form {
+  margin: 0;
+  padding: 0;
+}
+
+#public_page #quick_search {
+  width: 100%;
+}
+
+#public_page #quick_search, #public_page #quick_search table
+{
+  padding: 0;
+font-family: verdana;
+color: #600;
+font-size: 10px;
+font-weight: bold;
+vertical-align: middle;
+  margin-right: 4px;
+  margin-left: 4px;
+}
+
+#public_page #quick_search table td { padding-top: 2px; padding-bottom: 2px; line-height: 12px;}
+
+#public_page #quick_search table select, 
+#public_page #quick_search table input, 
+#public_page #quick_search table .date_form,
+#public_page #quick_search table .date_form td
+{
+padding:0;
+margin:0;
+font-family: Verdana;
+color: #039;
+font-weight: normal;
+}
+#public_page #quick_search table .date_form td { font-size: 8px; } 
+
+#public_page #quick_search .myGender {
+  height: 52px;
+}
+#public_page #quick_search .myGender img {
+  vertical-align: middle;
+  margin-bottom: 2px;
+  margin-left: 3px;
+}
+#public_page #quick_search .myGender input {
+  width: 8px;
+  margin: 0;
+  padding: 0;
+  margin-top: 2px;
+  margin-bottom: 0;
+}
+
+#public_page #quick_search .seekGender {
+  height: 48px;
+  padding: 0;
+  margin: 0;
+  vertical-align: middle;
+}
+#public_page #quick_search .seekGender img {
+  vertical-align: middle;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 2px;
+}
+#public_page #quick_search .seekGender input {
+  width: 8px;
+  margin: 0;
+  padding: 0;
+  margin-top: 2px;
+  margin-bottom: 0;
+}
+
+#public_page #quick_search .Dob {
+  height: 48px;
+  margin:0;
+  padding-top: 0;
+  vertical-align: top;
+}
+#public_page #quick_search .Dob .date_form {
+  margin-left: 6px;
+}
+
+#public_page #quick_search .seekAge {
+  height: 31px;
+}
+
+#public_page .subtitle {  
+  font-family: Verdana, sans-serif, Arial, Helvetica; 
+  font-size: 18px; 
+  font-weight: bold; 
+  color: #039;
+  padding-top: 3em;
+}
+
+#pub_content {
+  width: 90%;
+}
+
+#tour_page {
+  font-family: Verdana, sans-serif, Arial, Helvetica; 
+  font-size: 11px; 
+  padding-left:5px;
+  padding-right:2em;
+  padding-top: 2em;
+  color: #600;
+}
+
+#tour_page .subtitle {
+  font-size: 14px;
+  font-weight: bolder;
+  color: #900;
+}
+
+#tour_page .description_elements {
+  font-size: 11px;
+  color: #f33;
+}
+
+
+/* START MEMBER PAGES */
+
+body#members_body {
+  background-image: url("https://okayamigo.xyz/images/frame/pink.stripes.gif");
+}
+
+#member_page 
+{
+text-align: left;
+/* width: 700px; */
+  padding:0;
+  margin: 0;
+  /* margin-top: 34px; */
+/* border: 5px #f00 solid; */
+  height: 100%;
+background-color: #FFD8D4;
+}
+
+#page_content 
+{
+  background-image: url(https://okayamigo.xyz/images/background.gif); 
+  background-repeat: repeat-y; 
+  background-position: 52% -1px;
+}
+
+#member_pages 
+{
+  font-family: Verdana, sans-serif, Arial, Helvetica; 
+  font-size: 10px; 
+  color:#000000;
+  margin:0;
+  padding:0;
+  text-align: center;
+}
+
+#member_pages .page_title 
+{
+  margin-left:1em;
+  text-align: left;
+  clear: both;
+
+}
+
+#member_pages .page_description 
+{
+  color:#600;
+  margin-top: 3px;
+  margin-left: 4em;
+  margin-bottom: 2em;
+  text-align: left;
+  clear: both;
+  font-size: 10px;
+}
+
+#member_pages .total_found {
+  font-size: 12px;
+  text-align: left;
+}
+
+#member_pages .current_page_listing {
+  font-size: 12px;
+  text-align: right;
+}
+
+#member_pages h1 
+{
+  font-size: 24px;
+  color: #006699;
+}
+
+#member_pages h2 
+{
+  font-size: 14px;
+  color: #666666;
+}
+
+#member_pages .members_content {
+  margin: 0;
+  margin-right: 0;
+  padding: 0;
+  padding-right: 8px;
+}
+
+#member_pages .content table.before_content {
+  margin: 0;
+  padding: 0;
+}
+
+#member_pages .content_box 
+{
+  border: 1px #06c solid;
+  
+  background-color: #fff;
+  color: #004E9E;
+  text-align: left;
+  padding-left: 3px;
+  padding-right: 2px;
+  font-size: 10px;
+  margin: 10px;
+  
+  width: auto;
+  vertical-align:top;
+}
+
+/* MEMBER HOME PAGE */
+#member_pages .content_box a {
+  font-weight: bold;
+  color: #444176;
+}
+
+#member_pages .content_box b 
+{
+  font-weight: bold;
+  color: #0D1952;
+  text-decoration: none;
+}
+
+#member_pages .featured_member_text { color: #39f; }
+
+/* END MEMBER HOME */
+
+#administration_menu {
+float:left;
+margin-left:0px;
+padding:2px;
+
+font-size:10px;
+font-family: Verdana, Arial, Sans-Serif;
+
+display: inline;
+}
+#administration_menu ul, #administration_menu li {
+margin:0px;
+padding:0px;
+display: inline;
+list-style: none;
+}
+
+#administration_menu li a {
+padding: 4px;
+color: #06F;
+}
+
+#administration_menu li a:hover {
+padding: 4px;
+color: #036;
+}
+

@@ -1,0 +1,32 @@
+# Secrets — NEVER commit
+config.php
+*.env
+.env*
+auth.local.*
+
+# Local tooling state
+.claude/
+.vscode/
+.idea/
+
+# User-uploaded media (regenerable / private)
+usermedia/
+user_media/
+
+# Generated / cached
+data/
+*.log
+*.bak
+*.swp
+*.tmp
+
+# OS junk
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Local DB dumps + seed snapshots
+*.sql.gz
+*.sql.bak
+forum/sql/seed_*.sql
+forum/sql/dump_*.sql
