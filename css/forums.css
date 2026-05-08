@@ -832,3 +832,54 @@ table.online td a { color: #890900; font-weight: bold; }
   table.post_form td.lbl { padding: 6px 8px 2px; }
   table.post_form textarea { height: 160px; }
 }
+
+/* =========================================================
+   Phase 2: mobile readability polish — bump small content text
+   in modern (non-legacy) surfaces. Desktop unchanged.
+   ========================================================= */
+@media (max-width: 768px) {
+  /* Breadcrumbs + stats banners: were 11px, hard to read at arm's length */
+  .crumbs       { font-size: 13px; padding: 6px 8px; }
+  .forum_stats  { font-size: 13px; padding: 8px 10px; }
+
+  /* Lobby cards: card body copy was 11px, also bump headings + buttons */
+  .lobby .card        { padding: 12px 12px; }
+  .lobby .card h3     { font-size: 16px; margin-bottom: 6px; }
+  .lobby .card p      { font-size: 14px; line-height: 1.45; }
+  .lobby .card a.btn  { font-size: 13px; padding: 6px 14px; }
+
+  /* Forum index + thread list: bump readable cells. Title was 12-13px,
+     descriptions 10px. Numeric cells stay small (they're short). */
+  table.forum_index td.fname a   { font-size: 15px; }
+  table.forum_index td.fname .desc { font-size: 12px; }
+  table.thread_list td.title a   { font-size: 14px; }
+  table.thread_list td.title .author { font-size: 11px; }
+
+  /* Post body: was 12px — gets the biggest mobile bump, this is the
+     primary reading surface. Line height grows for readability. */
+  table.post td.body            { font-size: 15px; line-height: 1.55; }
+  table.post td.body .post_header { font-size: 12px; }
+  table.post td.body .post_signature { font-size: 11px; }
+  table.post td.body .post_edited    { font-size: 11px; }
+  table.post td.meta .uname     { font-size: 14px; }
+  table.post td.meta .stats     { font-size: 11px; }
+
+  /* Post-form labels (reply / new topic): bump labels + help text */
+  table.post_form td.lbl        { font-size: 13px; }
+  table.post_form .bb_help      { font-size: 11px; line-height: 1.4; }
+
+  /* Sign-on form: bump labels for legibility on phones */
+  table.signon          { font-size: 13px; }
+  table.signon th       { font-size: 16px; }
+  table.signon td.lbl   { font-size: 13px; }
+
+  /* Toolbar: bump baseline text size, tap-target padding kept from Phase 1 */
+  .toolbar              { font-size: 13px; }
+
+  /* Online list */
+  table.online          { font-size: 13px; }
+  table.online th       { font-size: 13px; }
+
+  /* Flash messages */
+  .flash                { font-size: 13px; }
+}

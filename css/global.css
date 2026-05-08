@@ -64,6 +64,30 @@ text-size-adjust: 100%;
   }
 }
 
+/* Phase 2: mobile body font baseline bump + scoped image max-width.
+   Body fallback bump only catches text without explicit font-size — most
+   forum text has explicit sizes so they're untouched (those get individual
+   bumps in forums.css). Inside .legacy-frame the museum text-size-adjust
+   already locks scale, so this rule is a no-op there. */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+
+  /* Scoped image fluid-width: ONLY in modern (non-legacy) containers.
+     The splash and tour mosaics inside .legacy-frame need pixel-perfect
+     widths — they're explicitly excluded. */
+  table.post td.body img,
+  .lobby .card img,
+  .post_content img,
+  .flash img,
+  .crumbs img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
 a { 
 text-decoration: underline; 
 }
